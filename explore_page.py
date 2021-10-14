@@ -33,7 +33,7 @@ def clean_education(x):
 
 @st.cache
 def load_data():
-    df = pd.read_csv("stack-overflow-developer-survey-2021/survey_results_public.csv")
+    df = pd.read_csv("survey_results_public.csv")
     df = df[['Country', 'EdLevel', 'YearsCodePro', 'Employment', 'ConvertedCompYearly']]
     df = df.rename({"ConvertedCompYearly":"Salary"}, axis=1)
     df = df[df['Salary'].notnull()]
